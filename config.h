@@ -17,7 +17,7 @@ static const char col_green[]	    = "#98971a";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 //	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray5 },
+	[SchemeNorm] = { col_gray3, col_gray5, col_gray5 },
 	[SchemeSel]  = { col_gray5, col_green,  col_green  },
 };
 
