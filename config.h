@@ -20,7 +20,7 @@ static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 //	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
 	[SchemeNorm] = { col_gray3, col_gray6, col_gray5 },
-	[SchemeSel]  = { col_gray5, col_yellow,  col_green  },
+	[SchemeSel]  = { col_gray5, col_yellow,  col_yellow  },
 };
 
 /* tagging */
