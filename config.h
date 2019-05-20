@@ -63,6 +63,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_yellow, "-sf", col_gray5, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *mailcmd[]  = { "st", "-e", "neomutt" };
+static const char *musiccmd[]  = { "st", "-e", "ncmpcpp" };
 static const char *lockcmd[]  = { "slock", NULL };
 static const char *infocmd[]  = { "st", "-e", "htop" };
 static const char *surfcmd[]  = { "surf", "-s", "duckduckgo.com" };
@@ -73,6 +74,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockcmd } },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = mailcmd } },
+	{ MODKEY|ShiftMask,             XK_n,      spawn,          {.v = musiccmd } },
 	{ MODKEY|ShiftMask,             XK_i,      spawn,          {.v = infocmd } },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = surfcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
