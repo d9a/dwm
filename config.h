@@ -65,6 +65,7 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *mailcmd[]  = { "st", "-e", "neomutt" };
 static const char *lockcmd[]  = { "slock", NULL };
 static const char *infocmd[]  = { "st", "-e", "htop" };
+static const char *surfcmd[]  = { "surf", "-s", "duckduckgo.com" };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -73,6 +74,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockcmd } },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = mailcmd } },
 	{ MODKEY|ShiftMask,             XK_i,      spawn,          {.v = infocmd } },
+	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = surfcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
