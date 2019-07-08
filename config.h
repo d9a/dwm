@@ -66,7 +66,7 @@ static const char *mailcmd[]  = { "st", "-e", "neomutt" };
 static const char *musiccmd[]  = { "st", "-e", "ncmpcpp" };
 static const char *lockcmd[]  = { "slock", NULL };
 static const char *infocmd[]  = { "st", "-e", "htop" };
-static const char *surfcmd[]  = { "surf", "-s", "duckduckgo.com" };
+static const char *surfcmd[]  = { "surf", "duckduckgo.com" };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
