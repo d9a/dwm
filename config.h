@@ -48,7 +48,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -62,21 +62,11 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_yellow, "-sf", col_gray5, NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *mailcmd[]  = { "st", "-e", "neomutt" };
-static const char *musiccmd[]  = { "st", "-e", "ncmpcpp" };
-static const char *lockcmd[]  = { "slock", NULL };
-static const char *infocmd[]  = { "st", "-e", "htop" };
-static const char *surfcmd[]  = { "surf", "duckduckgo.com" };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockcmd } },
-	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = mailcmd } },
-	{ MODKEY|ShiftMask,             XK_n,      spawn,          {.v = musiccmd } },
-	{ MODKEY|ShiftMask,             XK_i,      spawn,          {.v = infocmd } },
-	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = surfcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
